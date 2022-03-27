@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --primary-violet : hsl(257, 40%, 49%);
+    --primary-soft-magenta :hsl(300, 69%, 71%);
+
+
+    --font-heading : 'Poppins', sans-serif; 
+
+    --mobile : 375px;
+    --desktop:1440px;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd{
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol{
+  list-style:none;
+  padding: 0;
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body{
+  background: url('../img/bg-mobile.svg'), var(--primary-violet);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#header{
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+#header > img{
+  width: 40%;
+  object-fit: cover;
+}
+
+.hero-illustration{
+  margin: auto;
+  width: 80%;
+  margin-bottom: 4rem;
+}
+
+.hero-illustration > img{
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.hero-details{
+  color: white;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-details > h1{
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-details > p{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-details > button{
+  color:var(--primary-violet);
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  border-radius: 16px;
+  width: 60%;
+  border: none;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+footer{
+  color: white;
+}
+
+
+.social-media-links{
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.social-media-links > i{
+  border: 1px solid white;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 100%;
+}
+
+@media (min-width: 1080px){
+  header{
+    margin: 0;
+  }
+
+  #header > img{
+    width: 15%;
+  }
+
+  main{
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: row;
+  }
+
+  .hero-illustration{
+    margin: 0;
+    width: 50%;
+    margin: 0;
+  }
+
+  .hero-details{
+    margin: 0;
+    max-width: 40%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-details > h1{
+    font-size: 2.8rem;
+    text-align: start;
+  }
+  .hero-details > button{
+    width: 40%;
+    border-radius: 40px;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+  .hero-details > p{
+    text-align: start;
+  }
+
+  footer{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+  }
+
+  .social-media-links{
+    max-width: 10%;
+    margin: 0;
+    margin-right: 5rem;
+    font-size: 1.5rem;
+  }
+
+  footer > small{
+    margin: auto;
+  }
+}
