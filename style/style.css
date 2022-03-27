@@ -229,7 +229,7 @@ footer{
     font-size: 1.5rem;
   }
 
-  footer > small{
+  footer > p{
     margin: auto;
   }
 }
